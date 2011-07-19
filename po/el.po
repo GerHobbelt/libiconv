@@ -10,10 +10,10 @@ msgstr ""
 "PO-Revision-Date: 2004-12-25 22:15+0200\n"
 "Last-Translator: Balaskas Euaggelos <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 
 #. TRANSLATORS: The first line of the short usage message.
 #: src/iconv.c:103

@@ -12,10 +12,10 @@ msgstr ""
 "PO-Revision-Date: 2009-01-08 22:24+0100\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms:nplurals=2; plural=(n != 1)\n"
 
 #. TRANSLATORS: The first line of the short usage message.

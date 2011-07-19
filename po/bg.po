@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2008-01-03 14:20+0200\n"
 "Last-Translator: Roumen Petrov <transl@roumenpetrov.info>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
-"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. TRANSLATORS: The first line of the short usage message.
@@ -253,8 +253,8 @@ msgstr "заместителят за байт към Уникод не може
 #, c-format
 msgid "cannot convert unicode substitution to target encoding: %s"
 msgstr ""
-"заместителят за Уникод не може да се преобразува към резултатното кодиране: "
-"%s"
+"заместителят за Уникод не може да се преобразува към резултатното кодиране: %"
+"s"
 
 #. TRANSLATORS: An error message.
 #. The %s placeholder expands to a piece of text, specified through --byte-subst.
