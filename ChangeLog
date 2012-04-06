@@ -1,3 +1,109 @@
+2011-10-23  Bruno Haible  <bruno@clisp.org>
+
+	New encoding ISO-2022-CP-MS.
+	* NOTES: Mention ISO-2022-JP-MS.
+	* tools/CP50221-0208-EXT.TXT: New file.
+	* tools/CP50221-0212-EXT.TXT: New file.
+	* tools/8bit_tab_to_h.c: Add comments about how to generate
+	cp50221_0208_ext.h, cp50221_0212_ext.h.
+	* tools/Makefile: Add rules for generating cp50221_0208_ext.h,
+	cp50221_0212_ext.h.
+	* lib/cp50221_0208_ext.h: New file, mostly generated.
+	* lib/cp50221_0212_ext.h: New file, mostly generated.
+	* lib/iso2022_jpms.h: New file.
+	* lib/converters.h: Include it.
+	* lib/encodings.def: Add ISO-2022-JP-MS.
+	* README, man/iconv_open.3: Add ISO-2022-JP-MS.
+	* tests/ISO-2022-JP-MS-snippet: New file.
+	* tests/ISO-2022-JP-MS-snippet.UTF-8: New file.
+	* tests/Makefile.in (check): Also test ISO-2022-JP-MS.
+	Reported by Jeff Diehl <diehl.jeff@gmail.com>.
+
+2011-10-23  Bruno Haible  <bruno@clisp.org>
+
+	* lib/encodings.def: Add comments about Windows names of encodings.
+
+2011-10-18  Bruno Haible  <bruno@clisp.org>
+
+	* m4/libtool.m4: Update from libtool-2.4.2, with modifications:
+	2008-04-06  Bruno Haible  <bruno@clisp.org>
+		* m4/libtool.m4 (LT_INIT): When setting LIBTOOL, use
+		CONFIG_SHELL; don't assume that the Makefile.in will set SHELL
+		to ${CONFIG_SHELL}..
+	* m4/ltoptions.m4: Likewise.
+	* m4/ltversion.m4: Likewise.
+	* build-aux/ltmain.sh: Likewise.
+
+2011-10-03  Bruno Haible  <bruno@clisp.org>
+
+	* lib/relocatable.c: Update from gnulib.
+
+2011-09-02  Bruno Haible  <bruno@clisp.org>
+
+	Fix "make check" failure when $(srcdir) != $(builddir).
+	* tests/Makefile.in (check): When $(srcdir) != ., temporarily copy
+	GB18030.IRREVERSIBLE.TXT into the build directory.
+	Reported by Christian Weisgerber <naddy@mips.inka.de>.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	Ensure all HTML-formatted man pages are up-to-date.
+	* Makefile.devel (all): Depend on man/iconvctl.3.html and
+	man/iconv_open_into.3.html.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	* Version 1.14 released.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	* configure.ac: Bump version number to 1.14.
+	* README: Likewise.
+	* include/iconv.h.in (_LIBICONV_VERSION): Likewise.
+	* windows/iconv.rc: Update.
+	* lib/Makefile.in (LIBICONV_VERSION_INFO): Bump to 7:1:5.
+	* src/iconv.c (print_version): Update copyright year.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	Avoid a test failure on Solaris 2.6 and HP-UX 11.00.
+	* tests/test-to-wchar.c (main): Skip the test if conversion to wchar_t
+	is not supported.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	* tests/check-subst: Add comments about OSF/1.
+
+2011-08-07  Bruno Haible  <bruno@clisp.org>
+
+	* lib/relocatable.c: Update from gnulib.
+
+2011-08-06  Bruno Haible  <bruno@clisp.org>
+
+	Upgrade the GB18030 converter to the version from 2005.
+	* lib/gb18030ext.h (gb18030ext_2uni_pagefe): Change element type to
+	'unsigned int'. Change values for 0xFE51..0xFE53, 0xFE59, 0xFE61,
+	0xFE66, 0xFE67, 0xFE6C, 0xFE6D, 0xFE76, 0xFE7E, 0xFE90, 0xFE91, 0xFEA0.
+	(gb18030ext_mbtowc): Change type of wc to 'unsigned int'. Change values
+	for 0xA6D9..0xA6DF, 0xA6EC..0xA6ED, 0xA6F3, 0xA8BC.
+	(gb18030ext_page9f, gb18030ext_pagefe): New constant arrays.
+	(gb18030ext_wctomb): Change values for U+1E3F, U+9FB4..U+9FBB,
+	U+FE10..U+FE19, U+20087, U+20089, U+200CC, U+215D7, U+2298F, U+241FE.
+	* tests/GB18030-BMP.TXT: Change values for 0xA6D9..0xA6DF,
+	0xA6EC..0xA6ED, 0xA6F3, 0xA8BC, 0xFE51..0xFE53, 0xFE59, 0xFE61, 0xFE66,
+	0xFE67, 0xFE6C, 0xFE6D, 0xFE76, 0xFE7E, 0xFE90, 0xFE91, 0xFEA0, to map
+	to now-assigned Unicode codepoints.
+	* tests/GB18030.IRREVERSIBLE.TXT: New file.
+
+2011-08-06  Bruno Haible  <bruno@clisp.org>
+
+	Fix conversion bug in CP1258 converter.
+	* lib/vietcomb.h (viet_comp_table_data): Remove entry for
+	U+00A5 U+0301. Fix entry for U+00A8 U+0301.
+	(viet_decomp_table): Fix entry for U+0385.
+	* tests/CP1258.IRREVERSIBLE.TXT: Update.
+	Reported by Gertjan Halkes <gertjan@ghalkes.nl>.
+
 2011-07-03  Bruno Haible  <bruno@clisp.org>
 
 	Improve interactive behaviour of iconv program.
